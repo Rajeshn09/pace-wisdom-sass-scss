@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: white;
+}
+
+.navbar {
+  background-color: #333;
+  display: flex;
+  padding: 1em 2em;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-bottom: 15px solid yellowgreen;
+}
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+.navbar .nav-links li {
+  margin-right: 20px;
+}
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+.navbar .nav-links li a:hover {
+  color: #ff7f50;
+}
+
+.content {
+  padding: 2em;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer-content .footer-logo {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.footer .footer-content .footer-links {
+  list-style: none;
+  display: flex;
+}
+.footer .footer-content .footer-links li {
+  margin-right: 15px;
+}
+.footer .footer-content .footer-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+.footer .footer-content .footer-links li a:hover {
+  color: #ff7f50;
+}
+.footer p {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 0.8em;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #23c72c, 0 0 70px #3d2d99, 0 0 80px #3936a6, 0 0 100px #3f0fdf, 0 0 150px #5a0fe6;
+  }
+  20% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0066cc, 0 0 70px #9900cc, 0 0 80px #6600cc, 0 0 100px #003366, 0 0 150px #330066;
+  }
+  40% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #cc3300, 0 0 70px #cc0066, 0 0 80px #cc0099, 0 0 100px #663300, 0 0 150px #990033;
+  }
+  60% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #009933, 0 0 70px #cc0099, 0 0 80px #99cc00, 0 0 100px #003366, 0 0 150px #006699;
+  }
+  80% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #cc3300, 0 0 70px #cc0066, 0 0 80px #cc0099, 0 0 100px #663300, 0 0 150px #990033;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00e6, 0 0 70px #ff00e6, 0 0 80px #2e07ef, 0 0 100px #5630a8, 0 0 150px #2d21aa;
+  }
+}
+.sunday-sale-content h2 {
+  animation: neonGlow 2s infinite;
+}
+
+.product-card {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border-radius: 20px;
+}
+.product-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.product-card .product-info h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+.product-card .product-info .product-price {
+  color: #666;
+  margin-bottom: 10px;
+}
+.product-card .product-info .place-order-btn,
+.product-card .product-info .add-to-cart-btn {
+  background-color: #333;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.product-card .product-info .place-order-btn:hover,
+.product-card .product-info .add-to-cart-btn:hover {
+  background-color: #ff7f50;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.content .product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content .product-cards .product-card {
+  width: 200px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.content .product-cards .product-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+.content .product-cards .product-card .product-info {
+  padding: 10px;
+}
+.content .product-cards .product-card .product-info .product-name {
+  margin: 0;
+  font-size: 1em;
+}
+.content .product-cards .product-card .product-info .product-price {
+  margin: 0;
+  font-size: 0.9em;
+  color: #007bff;
+}
+.content .product-cards .product-card .product-info .btn-order,
+.content .product-cards .product-card .product-info .btn-cart {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.content .product-cards .product-card .product-info .btn-order:hover,
+.content .product-cards .product-card .product-info .btn-cart:hover {
+  background-color: #218838;
+}
+.content .product-cards .product-card:hover {
+  background-color: #ccc;
+}
+
+.full-screen-wallpaper {
+  display: block;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.full-screen-wallpaper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+}
+
+.sunday-sale {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: rgb(21, 20, 20);
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+  border: 8px solid #f41515;
+  border-radius: 5%;
+}
+
+.left_img img,
+.right_img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.left_img,
+.right_img {
+  flex: 1;
+  padding: 10px;
+}
+
+.featured-products {
+  margin-top: 40px;
+}
+.featured-products h2 {
+  text-align: center;
+}
+.featured-products .featured-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.featured-products .featured-cards .featured-card {
+  width: 18%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.featured-products .featured-cards .featured-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.featured-products .featured-cards .featured-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #ccc;
+}/*# sourceMappingURL=style.css.map */
